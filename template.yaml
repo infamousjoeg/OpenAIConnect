@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Lambda function that handles completions from OpenAI's GPT-3 API.
+
+Resources:
+  OpenAIConnect:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: openai_connect.lambda_handler
+      Runtime: python3.8
+      CodeUri: .
+      Timeout: 15
+      Environment:
+        Variables:
+          OPENAI_API_KEY:
+          OPENAI_MODEL_ID:
