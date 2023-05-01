@@ -2,7 +2,7 @@ test:
 	sam local invoke OpenAIConnect -n env.json -e event.json
 
 test-cloud:
-	sam sync --stack-name {{OpenAIConnect}} --watch
+	sam sync --stack-name sam-app-test --watch
 
 build:
 	sam build
