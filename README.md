@@ -30,6 +30,9 @@ An AWS Lambda function that handles completions from OpenAI's GPT-3 API.
 # Validate the SAM template
 make validate
 
+# Build the SAM template
+make build
+
 # Test locally
 make test
 

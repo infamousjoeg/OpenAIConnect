@@ -22,13 +22,15 @@ def lambda_handler(event, context):
 
     # Return the response to Amazon Lex
     return {
-        'sessionAttributes': event.get('sessionAttributes', {}),
-        'dialogAction': {
-            'type': 'Close',
-            'fulfillmentState': 'Fulfilled',
-            'message': {
+        'sessionState': {
+            'dialogAction': {
+                'type': 'ElicitIntent',
+            }
+        },
+        'messages': [
+            {
                 'contentType': 'PlainText',
                 'content': davinci_response
             }
-        }
+        ]
     }

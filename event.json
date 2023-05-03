@@ -1,3 +1,4 @@
 {
-    "inputTranscript": "How do you write 'Hello, World!' in Python?"
+    "sessionId": "12345",
+    "inputTranscript": "How do I print hello world to the console in Python?"
 }
